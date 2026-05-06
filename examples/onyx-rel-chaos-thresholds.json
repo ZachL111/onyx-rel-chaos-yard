@@ -1,0 +1,17 @@
+{
+  "repo": "onyx-rel-chaos-yard",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 194,
+    "watch": 125
+  },
+  "terms": [
+    "budget pressure",
+    "failure width",
+    "recovery gap",
+    "runbook drift"
+  ]
+}
