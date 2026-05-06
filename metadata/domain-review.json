@@ -1,0 +1,73 @@
+{
+  "repo": "onyx-rel-chaos-yard",
+  "language": "Solidity",
+  "category": "Reliability",
+  "goal": "Develop a Solidity command-oriented project for chaos scenarios with fixture event logs, golden state snapshots, and offline replay mode.",
+  "review_model": {
+    "terms": [
+      "budget pressure",
+      "failure width",
+      "recovery gap",
+      "runbook drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "budget pressure",
+      "signal": 74,
+      "slack": 34,
+      "drag": 16,
+      "confidence": 70,
+      "score": 204,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "failure width",
+      "signal": 62,
+      "slack": 42,
+      "drag": 9,
+      "confidence": 76,
+      "score": 215,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "recovery gap",
+      "signal": 74,
+      "slack": 30,
+      "drag": 28,
+      "confidence": 65,
+      "score": 159,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "runbook drift",
+      "signal": 62,
+      "slack": 31,
+      "drag": 19,
+      "confidence": 87,
+      "score": 185,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "budget pressure",
+      "signal": 79,
+      "slack": 36,
+      "drag": 18,
+      "confidence": 68,
+      "score": 208,
+      "lane": "ship"
+    }
+  ]
+}
